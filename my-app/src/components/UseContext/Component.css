@@ -1,0 +1,179 @@
+/* Parent Container */
+.comp {
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f4ff, #d9e8fc);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Nested Component: Com-A */
+.comp-A {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #badfe1, #2eabb2);
+    border: 2px solid #7ed6df;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Com-A */
+.comp-A:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Nested Component: Com-B */
+.comp-B {
+    width: 70%;
+    height: auto;
+    padding: 15px;
+    background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+    border: 2px solid #fd79a8;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Com-B */
+.comp-B:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Nested Component: Com-C */
+.comp-C {
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(135deg, #ff9ff3, #feca57);
+    border: 2px solid #ff6b81;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Com-C */
+.comp-C:hover {
+    transform: rotate(2deg);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Nested Component: Com-D */
+.comp-D {
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    background: linear-gradient(135deg, #81ecec, #74b9ff);
+    border: 2px solid #0984e3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comp-D-Btn {
+  align-items: center;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.comp-D-Btn:active,
+.comp-D-Btn:hover {
+  outline: 0;
+}
+
+.comp-D-Btn span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.comp-D-Btn:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .comp-D-Btn {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+
+/* Hover Effect for Com-D */
+.comp-D:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .comp, .comp-A, .comp-B, .comp-C, .comp-D {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .comp {
+        flex-direction: column;
+    }
+
+    .comp-A, .comp-B, .comp-C, .comp-D {
+        width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .comp, .comp-A, .comp-B, .comp-C, .comp-D {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .comp-A, .comp-B, .comp-C, .comp-D {
+        font-size: 0.9rem;
+    }
+}

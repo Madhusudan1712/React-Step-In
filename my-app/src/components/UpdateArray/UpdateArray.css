@@ -1,0 +1,139 @@
+/* General layout for the fruit cart */
+.fruitCart {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9; /* Light neutral background */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Cart items container */
+.cartItems {
+    background-color: #ffffff; /* White background for the main section */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Title styling */
+.cartItems h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #2c3e50; /* Dark color for better readability */
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Styling for the list of fruits */
+.cartItems ol {
+    font-size: 1.1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.cartItems li {
+    padding: 12px;
+    margin: 6px 0;
+    background-color: #ecf0f1; /* Light gray background for each item */
+    border-radius: 8px;
+    color: #34495e;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Light shadow for separation */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cartItems li:hover {
+    background-color: #bdc3c7; /* Slightly darker background on hover */
+    transform: scale(1.05);
+}
+
+/* Styling for the select dropdown */
+select {
+    background-color: #ffffff; /* White background */
+    color: #34495e; /* Dark color for text */
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7; /* Light border */
+    width: 100%;
+    max-width: 350px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #3498db; /* Blue border when focused */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+button {
+    background-color: #3498db; /* Standard blue color for buttons */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue when hovered */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight shrink effect on click */
+}
+
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+    .cartItems h1 {
+        font-size: 1.8rem;
+    }
+
+    .cartItems ol {
+        font-size: 1rem;
+    }
+
+    select, button {
+        max-width: 300px;
+        width: 90%;
+    }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+    .cartItems h1 {
+        font-size: 1.5rem;
+    }
+
+    .cartItems ol {
+        font-size: 0.9rem;
+    }
+
+    select, button {
+        max-width: 260px;
+        width: 90%;
+    }
+
+    .cartItems li {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
