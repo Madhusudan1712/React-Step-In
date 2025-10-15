@@ -24,6 +24,7 @@ import StopWatch from "./components/StopWatch/StopWatch";
 import './components/StopWatch/StopWatch.css'
 import LowBattery from "./components/LowBattery/LowBattery";
 import './components/LowBattery/LowBattery.css'
+import PlayBoard from "./components/CompanyDevSpace/PlayBoard/PlayBoard";
 function App() {
 
   // const mobiles = [
@@ -64,7 +65,8 @@ function App() {
       {/* <Component_A/> */}
       {/* <UseRef/> */}
       {/* <StopWatch/> */}
-      <LowBattery/>
+      {/* <LowBattery/> */}
+      <PlayBoard/>
     </>
   )
 }
